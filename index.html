@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador - Challenge 01</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+                <h1><img src="imagenes/logoBlanco.png" alt="logo Alura" id="logoEncabezado"></h1>
+        </header>
+        
+        <main>
+            <section class="contenidoElementos">
+                <div class="panelIzquierdo">
+                    <textarea name="Mensaje"  id="textAreaMensaje" cols="10" rows="30" placeholder="Ingrese el texto aqui..." required autofocus></textarea>
+                </div>
+                <div class="botones">
+                    <h2 class="requisitosTexto">Solo minúsculas y sin acentos</h2>                        <input type="submit" value="Encriptar" class="botonEncriptar" onclick="Encriptar()">
+                    <input type="submit" value="Desencriptar" class="botonDesencriptar"onclick="Desencriptar()">
+                </div>
+                <div class="panelDerecho">
+                    <fieldset class="elementosNoEncontrado">
+                        <img id="imagenMostrarMensaje" src="imagenes/mensajeNoEncontrado.png" alt="">
+                        <h1 id="textoNoEncontrado">Ningun mensaje fue encontrado</h1>
+                        <h2 id="ingreseTexto">Ingrese el texto que quiere encriptar o desencriptar</h2>
+                    </fieldset>
+                    <textarea name="MostrarMensaje" id="textAreaMostrarMensaje" cols="10" rows="30" disabled></textarea>
+                    <input type="button" id="botonCopiar" value="¡Copiar!" class="botonCopiar" onclick="CopiarTexto()">
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p class="copyright">&copy Copyright ~ Dev Cesar Navarro - 2022</p>
+        </footer>
+    </body>
+</html>
+
+<script src="main.js"></script>
