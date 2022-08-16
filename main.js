@@ -25,5 +25,5 @@ function OcultarElementos()
     document.getElementById("textoNoEncontrado").style.display = "none";
     document.getElementById("ingreseTexto").style.display = "none"; 
     document.getElementById("botonCopiar").style.visibility = "visible";
-
+    document.getElementById("textAreaMensaje").value = "";
 }
