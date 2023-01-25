@@ -14,27 +14,31 @@
     </head>
 
     <body>
-        <header>
-                <h1><img src="imagenes/logoBlanco.png" alt="logo Alura" id="logoEncabezado"></h1>
+        <header class="header">
+            <img src="imagenes/logoAlura.png" alt="logo Alura" id="logoEncabezado">
         </header>
         
         <main>
             <section class="contenidoElementos">
                 <div class="panelIzquierdo">
                     <textarea name="Mensaje"  id="textAreaMensaje" cols="10" rows="30" placeholder="Ingrese el texto aqui..." required autofocus></textarea>
+                    <h2 class="requisitosTexto">No utilice acentos ni caracteres especiales</h2>                        
+                    <div class="botones">
+                        <input type="submit" value="Encriptar" class="botonEncriptar" onclick="Encriptar()">
+                        <input type="submit" value="Desencriptar" class="botonDesencriptar"onclick="Desencriptar()">
+                    </div>
                 </div>
-                <div class="botones">
-                    <h2 class="requisitosTexto">Solo minúsculas y sin acentos</h2>                        <input type="submit" value="Encriptar" class="botonEncriptar" onclick="Encriptar()">
-                    <input type="submit" value="Desencriptar" class="botonDesencriptar"onclick="Desencriptar()">
-                </div>
+                
                 <div class="panelDerecho">
                     <fieldset class="elementosNoEncontrado">
                         <img id="imagenMostrarMensaje" src="imagenes/mensajeNoEncontrado.png" alt="">
                         <h1 id="textoNoEncontrado">Ningun mensaje fue encontrado</h1>
                         <h2 id="ingreseTexto">Ingrese el texto que quiere encriptar o desencriptar</h2>
                     </fieldset>
-                    <textarea name="MostrarMensaje" id="textAreaMostrarMensaje" cols="10" rows="30" disabled></textarea>
-                    <input type="button" id="botonCopiar" value="¡Copiar!" class="botonCopiar" onclick="CopiarTexto()">
+                    <fieldset class="elementosEncontrado">
+                        <textarea name="MostrarMensaje" id="textAreaMostrarMensaje" cols="10" rows="30" disabled></textarea>
+                        <input type="button" id="botonCopiar" value="¡Copiar!" class="botonCopiar" onclick="CopiarTexto()">    
+                    </fieldset>
                 </div>
             </section>
         </main>

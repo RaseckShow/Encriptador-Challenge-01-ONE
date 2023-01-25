@@ -2,29 +2,28 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 header{
-    background: linear-gradient(#1B2A36 90%, #7BC3F5);
-    padding: 15px 50px;   
+    background: linear-gradient(#1B2A36 90%, #7BC3F5);  
+    display: flex;
+    padding: 15px;
 }
 main{
     padding-right: 2%;
     background-color: #7BC3F5;
 }
-.logoEncabezado{
-    height: 10%;
-}
 .contenidoElementos{
     padding: 10px;
-    height: 1080px;
+    height: 75vh;
+    display: flex;
+    justify-content: space-around;
 }
 .panelIzquierdo{
-    float: left;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     width: 60%;
     height: auto;
     border-radius: 20px;
 }
 #textAreaMensaje{
-    float: left;
     background: #7BC3F5;
     color: #0A3871;
     width: 80%;
@@ -33,9 +32,19 @@ main{
     display: inline-block;
     border: none;
     padding: 10px 10px;
-    margin: 10%;
+    margin: 5% 7%;
     font-size: 20px;
     resize: none;
+}
+#textAreaMensaje::-webkit-scrollbar{
+    background-color: #0A3871;
+    border-radius: 20px;
+    width: 8px;
+}
+#textAreaMensaje::-webkit-scrollbar-thumb{
+    background-color: #50A2B5;
+    border-radius: 20px;
+    width: 8px;
 }
 #textAreaMensaje::placeholder{
     color: #183036;
@@ -43,39 +52,34 @@ main{
     font-size: 20px;
 }
 .panelDerecho{
-    float: right;
     width: 40%;
-    position: absolute;
-    display: inline-block;
     height: auto;
     border-radius: 20px;
     background: #FEFEFE;
 }
 .elementosNoEncontrado{
-    position: absolute;
-    margin: 15% 0;
+    margin: 5% 0;
 }
 #imagenMostrarMensaje{
-    margin: 5%;
+    margin: 0 5%;
     width: 90%;
-    height: auto;
+    height: 250px;
 }
 #textoNoEncontrado{
-    margin: 5%;
+    margin: 2% 5%;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
 }
 #ingreseTexto{
-    margin: 5%;
+    margin: 1% 5%;
     font-size: 20px;
     text-align: center;
 }
 #textAreaMostrarMensaje{
-    float: left;
-    width: 80%;
-    height: 80%;
-    margin: 20% 10%;
+    width: 90%;
+    height: 55vh;
+    margin: 5%;
     border: none;
     outline: none;
     background: #FEFEFE;
@@ -83,6 +87,16 @@ main{
     font-size: 20px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     resize: none;
+}
+#textAreaMostrarMensaje::-webkit-scrollbar{
+    background-color: #0A3871;
+    border-radius: 20px;
+    width: 8px;
+}
+#textAreaMostrarMensaje::-webkit-scrollbar-thumb{
+    background-color: #50A2B5;
+    border-radius: 20px;
+    width: 8px;
 }
 .botonCopiar{
     width: 30%;
@@ -97,25 +111,30 @@ main{
     cursor: pointer;
     margin-bottom: 7%;
     margin-left: 35%;
-    visibility: hidden;
 }
 .botonCopiar:hover{
     background-color: #80bcf0;
     transform: scale(1.02);
 }
+.elementosEncontrado{
+    display: none;
+}
 .botones{
-    margin: 5% 10%;
-    width: 40%;
+    margin: 0 10%;
+    width: 80%;
     height: auto;
     border-radius: 20px;
-    float: left;
+    display: flex;
 }
 .requisitosTexto:before{
-    content: " !  ";
+    content: " ⚠ ";
     font-weight: bold;
+    font-size: 20px;
 }
 .requisitosTexto{
     font-size: 18px;
+    margin-left: 15%;
+    margin-bottom: 1%;
 }
 .botonEncriptar{
     width: 35%;
@@ -164,77 +183,79 @@ main{
 footer{
     background: linear-gradient(#3B5D75,#1B2A36);
     text-align: center;
-    padding: 20px;   
+    padding: 4px;   
 }
 .copyright{
     color: #FFFFFF;
-    font-size: 13px;
+    font-size: 14px;
     margin: 20px;
 }
 
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:767px) {
 
     .contenidoElementos{
-        height: 1150px;
-    }
-    .panelDerecho, .panelDerecho, .botones{
-        display: block;
-        width: auto;
-    }
-    .panelDerecho, .panelIzquierdo{
-        width: 100%;
-        height: 400px;
-    
-        position: relative;
-        margin: 10% 0;
-    }
-    .botonEncriptar, .botonDesencriptar, .requisitosTexto{
-        display: block;
-        margin: 5%;
-        width: 100%;
-    }
-    #imagenMostrarMensaje{
-        display: none;
-    }
-    #textAreaMostrarMensaje{
-        margin: 0 10%;
-    }
-}
-@media screen and (min-width: 481px) and (max-width:900px) {
-
-    .contenidoElementos{
-        height: 1250px;
-    }
-    .panelDerecho, .panelDerecho, .botones{
-        display: block;
-        width: 90%;
+        flex-direction: column;
+        height: auto;
+        align-items: baseline;
+        padding-left: 1.5%;
     }
     .panelDerecho, .panelIzquierdo{
-        width: 100%;
-        height: 400px;
-    
-        position: relative;
-        margin: 10% 0;
+        width: 97vw;
+        align-items: center;
     }
     .requisitosTexto{
-        margin: 2% 5%;
-        width: 10% 40%;
+        margin: 1% 5%;
         display: block;
     }
-    .botonEncriptar, .botonDesencriptar{
-        display: inline-block;
-        margin: 0 5%;
-        width: 35%;
+    .botones{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 4%;
     }
-    .elementosNoEncontrado{
-        width: 99%;
+    .botonEncriptar, .botonDesencriptar{
+        width: 90vw;
     }
     #imagenMostrarMensaje{
         display: none;
     }
+    #textAreaMensaje{
+        height: 40vh;
+    }
     #textAreaMostrarMensaje{
-        margin: 0 10%;
-        padding: 2%;
+        height: 35vh;
+    }
+}
+@media screen and (min-width: 768px) and (max-width:1023px) {
+
+    .contenidoElementos{
+        flex-direction: column;
+        height: auto;
+        align-items: baseline;
+        padding-left: 1.5%;
+    }
+    .panelDerecho, .panelIzquierdo{
+        width: 97vw;
+        align-items: center;
+    }
+    .requisitosTexto{
+        margin: 1% 20%;
+        display: block;
+    }
+    .botones{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 4%;
+    }
+    #imagenMostrarMensaje{
+        display: none;
+    }
+    #textAreaMensaje{
+        height:49vh;
+    }
+    #textAreaMostrarMensaje{
+        height: 30vh;
     }
 }
